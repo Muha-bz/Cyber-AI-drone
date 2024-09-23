@@ -1,6 +1,6 @@
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&weight=600&size=25&duration=3000&pause=1000&color=1ACAAA&background=11167B00&multiline=true&width=465&height=65&lines=%F0%9F%91%8B+%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C+%D0%BC%D1%8B+%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0+Cyber+AI+drone;%D0%B8+%D0%BC%D1%8B+%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%B8+Skills+Camp+2024)](https://git.io/typing-svg)
-## О проекте 
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&weight=600&size=25&duration=3000&pause=1000&color=1ACAAA&background=11167B00&multiline=true&width=465&height=65&lines=%F0%9F%91%8B+%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C+%D0%BC%D1%8B+%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0+Cyber+AI+drone;%D0%B8+%D0%BC%D1%8B+%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%B8+Brics+2024)](https://git.io/typing-svg)
+## О проекте "Мы найдем тебя"
 
 ## Цель и актуальность работы
 Организация спасательной операции (миссии) с формированием полётного задания в пересеченной местности при помощи КБС (Комплексной беспилотной системы) с использованием нейросети: обнаружение, доставка груза (без сброса), передача координат. Задание расчитано на самостоятельный забор груза. На этот проект нас вдохновил добровольческий поисковый отряд " ЛизаАлерт", ставящий своей задачей оперативное реагирование и гражданское содействие в поиске пропавших
@@ -47,7 +47,9 @@
 
 **`Мухина Кира`**:  программа для детекции объектов
 
+**`Роли и обязоности приведены ниже `**
 
+*https://1drv.ms/x/c/8e997581c10a3126/Ecr18pxTuWlFv4xwWPiLGBMBWcGFFrLzbj5pNkoTytCJAA?e=10Tqwt*
 
 
 Хотим представить решение поставленной задачи в компетенции **`"Искусвенный интелект в комплексных беспилотных системах"`**.
