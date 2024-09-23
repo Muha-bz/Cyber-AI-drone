@@ -49,6 +49,10 @@
 
 **`Роли и обязоности приведены ниже `**
 
+![Описание изображения](images/1.jpg)
+
+![Описание изображения](images/2.jpg)
+
 *https://1drv.ms/x/c/8e997581c10a3126/Ecr18pxTuWlFv4xwWPiLGBMBWcGFFrLzbj5pNkoTytCJAA?e=10Tqwt*
 
 
