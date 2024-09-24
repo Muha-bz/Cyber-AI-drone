@@ -110,26 +110,42 @@ def image_callback(msg):
     img_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV) 
     
     stone = cv2.inRange(img_hsv, (1, 120, 150), (97, 180, 230))
-    tree1 = cv2.inRange(img_hsv, (160, 220, 180),(190, 255, 255))
+    tree1 = cv2.inRange(img_hsv, (160, 210, 180),(190, 255, 255))
     tree2 = cv2.inRange(img_hsv, (160, 220, 180),(190, 255, 255))
-    human = cv2.inRange(img_hsv, (125, 100, 100),(175, 150, 180))
+    human = cv2.inRange(img_hsv, (120, 60, 50),(175, 150, 180))
     rover = cv2.inRange(img_hsv, (20, 150, 150),(40, 255, 250))
-    contours = [
-    {'contour': stone, 'color': (255, 0, 0), 'name': 'stone', 'effect': (0, 0, 255)},
-    {'contour': tree1, 'color': (19, 69, 139), 'name': 'tree1', 'effect': (139, 69, 19)},
-    {'contour': tree2, 'color': (19, 69, 139), 'name': 'tree2', 'effect': (139, 69, 19)},
-    {'contour': human, 'color': (0, 128, 0), 'name': 'human', 'effect': (0, 128, 0)},
-    {'contour': rover, 'color': (0, 255, 255), 'name': 'rover', 'effect': (255, 255, 0)}
-    ]
 
-    for item in contours:
-        if draw_contour(img, item['contour'], item['color'], name=item['name']):
-            set_effect(r=item['effect'][0], g=item['effect'][1], b=item['effect'][2])
-            rospy.sleep(0.2)
+    
+    if draw_contour(img,stone,  (255, 0, 0) , name='stone') :
+            set_effect(r=0, g=0, b=255)
+            rospy.sleep(0.1)
+            if stone[119][159] == 255:
+                point(name='stone')
 
-            if item['contour'][119][159] == 255:
-                # print('1')
-                point(name=item['name'])
+    if draw_contour(img,tree1,  (19, 69, 139) , name='tree') :
+            set_effect(r=139, g=69, b=19)
+            rospy.sleep(0.1)
+            if stone[119][159] == 255:
+                point(name='tree1')
+
+    if draw_contour(img,tree2,  (19, 69, 139) , name='tree') :
+            set_effect(r=139, g=69, b=19)
+            rospy.sleep(0.1)
+            if stone[119][159] == 255:
+                point(name='tree1')
+
+
+    if draw_contour(img,human,  (0, 128, 0), name='human') :
+            set_effect(r=0, g=128, b=0)
+            rospy.sleep(0.1)
+            if stone[119][159] == 255:
+                point(name='human')
+
+    if draw_contour(img,rover,  (0, 255, 255), name='rover') :
+            set_effect(r=255, g=255, b=0)
+            rospy.sleep(0.1)
+            if stone[119][159] == 255:
+                point(name='rover')
 
     
     
