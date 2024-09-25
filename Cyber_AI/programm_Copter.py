@@ -26,7 +26,7 @@ set_effect = rospy.ServiceProxy('led/set_effect', SetLEDEffect)  # define proxy 
 image_pub = rospy.Publisher('~debug', Image,  queue_size=1)
 bridge = CvBridge()
 
-color = {}
+color_detect = {}
 
 def navigate_wait(x=0, y=0, z=0, yaw=float('nan'), speed=0.5, frame_id='', auto_arm=False, tolerance=0.2):
     navigate(x=x, y=y, z=z, yaw=yaw, speed=speed, frame_id=frame_id, auto_arm=auto_arm)
@@ -37,115 +37,130 @@ def navigate_wait(x=0, y=0, z=0, yaw=float('nan'), speed=0.5, frame_id='', auto_
             break
         rospy.sleep(0.2)
 
+z1=z2=z3=z4=z5=0
+
 def draw_contour(img, mask, color, name):
+    global z1,z2,z3,z4,z5
     contours,_ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     if contours:
         box_contor = max(contours, key=cv2.contourArea)
         x,y,w,h = cv2.boundingRect(box_contor)
         cv2.rectangle(img,(x,y),(x+w,y+h),color,2)
         cv2.putText(img,name,(x-15,y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5,(255,255,255),2)
+        
+        if name == 'stone' and z1<=2:
+            set_effect(r=0, g=0, b=255)
+            rospy.sleep(3)
+            set_effect(r=220, g=20, b=60)
+            z1 +=1
+
+        if name == 'tree 1' and z2==0:
+            set_effect(r=139, g=69, b=19)
+            rospy.sleep(3)
+            set_effect(r=220, g=20, b=60)
+            z2=1 
+             
+        if name == 'tree 2' and z3==0:
+            set_effect(r=139, g=69, b=19)
+            rospy.sleep(3)
+            set_effect(r=220, g=20, b=60)
+            z3=1 
+
+        if name == 'human' and z4==0:
+            set_effect(r=0, g=128, b=0) 
+            rospy.sleep(3)
+            set_effect(r=220, g=20, b=60)
+            z4=1 
+            
+
         return True
     return False
 
 x1=x2=x3=x4=x5=y1=y2=y3=y4=y5=0    
     
 def point(name):
-    global get_telemetry, x1, x2, x3, x4, x5, y1, y2, y3, y4, y5, color
+    global get_telemetry, x1, x2, x3, x4, x5, y1, y2, y3, y4, y5, color_detect
     telemetry = get_telemetry(frame_id='aruco_map')
 
-    if name == 'stone 1':
-        color[name] == 'Brown'
+    if name == 'stone':
+        color_detect[name] == 'Brown'
         x1= round(telemetry.x,1)
         y1= round(telemetry.y,1)
         print(x1, y1)
 
     if name == 'tree 1':
         if x2 == 0 and y2 == 0:
-            color[name] == 'Green'
+            color_detect[name] == 'Green'
             x2= round(telemetry.x,1)
             y2= round(telemetry.y,1)
-            print(name, x2, y2, color)
+            print(name, x2, y2, color_detect)
     
         else:
-            color[name] == 'Green'
+            color_detect[name] == 'Green'
             x3= round(telemetry.x,1)
             y3= round(telemetry.y,1)
-            print(name, x3, y3, color)
+            print(name, x3, y3, color_detect)
 
     if name == 'tree 2':
         if x2 == 0 and y2 == 0:
-            color[name] == 'Green'
+            color_detect[name] == 'Green'
             x2= round(telemetry.x,1)
             y2= round(telemetry.y,1)
-            print(name, x2, y2, color)
+            print(name, x2, y2, color_detect)
 
     
         else:
-            color[name] == 'Green'
+            color_detect[name] == 'Green'
             x3= round(telemetry.x,1)
             y3= round(telemetry.y,1)
-            print(name, x3, y3, color)
+            print(name, x3, y3, color_detect)
 
     if name == 'human':
-        color[name] == 'Violet'
+        color_detect[name] == 'Violet'
         x4= round(telemetry.x,1)
         y4= round(telemetry.y,1)
-        print(name, x4, y4, color)
+        print(name, x4, y4, color_detect)
 
     if name == 'rover':
-        color[name] == 'Yellow'
+        color_detect[name] == 'Yellow'
         x5= round(telemetry.x,1)
         y5= round(telemetry.y,1)
-        print(name, x5, y5, color)
+        print(name, x5, y5, color_detect)
 
     
-
-
-    
-
 
 def image_callback(msg):
     global color
     img = bridge.imgmsg_to_cv2(msg, 'bgr8')
     img_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV) 
     
-    stone = cv2.inRange(img_hsv, (1, 120, 150), (97, 180, 230))
-    tree1 = cv2.inRange(img_hsv, (160, 210, 180),(190, 255, 255))
-    tree2 = cv2.inRange(img_hsv, (160, 220, 180),(190, 255, 255))
-    human = cv2.inRange(img_hsv, (120, 60, 50),(175, 150, 180))
+    stone = cv2.inRange(img_hsv, (1, 120, 100), (20, 150, 130))
+    tree1 = cv2.inRange(img_hsv, (165, 190, 190),(175, 255, 250))
+    tree2 = cv2.inRange(img_hsv, (165, 190, 190),(175, 255, 250))
+    human = cv2.inRange(img_hsv, (135, 95, 110),(155, 130, 180))
     rover = cv2.inRange(img_hsv, (20, 150, 150),(40, 255, 250))
 
     
     if draw_contour(img,stone,  (255, 0, 0) , name='stone') :
-            set_effect(r=0, g=0, b=255)
-            rospy.sleep(0.1)
-            if stone[119][159] == 255:
-                point(name='stone')
+        if stone[119][159] == 255:
+            point(name='stone')
 
-    if draw_contour(img,tree1,  (19, 69, 139) , name='tree') :
-            set_effect(r=139, g=69, b=19)
-            rospy.sleep(0.1)
-            if stone[119][159] == 255:
-                point(name='tree1')
+    if draw_contour(img,tree1,  (19, 69, 139) , name='tree 1') :
+        if stone[119][159] == 255:
+            point(name='tree1')
 
-    if draw_contour(img,tree2,  (19, 69, 139) , name='tree') :
-            set_effect(r=139, g=69, b=19)
-            rospy.sleep(0.1)
-            if stone[119][159] == 255:
-                point(name='tree1')
+    if draw_contour(img,tree2,  (19, 69, 139) , name='tree 2') :
+        if stone[119][159] == 255:
+            point(name='tree2')
 
 
     if draw_contour(img,human,  (0, 128, 0), name='human') :
-            set_effect(r=0, g=128, b=0)
-            rospy.sleep(0.1)
-            if stone[119][159] == 255:
-                point(name='human')
+        if stone[119][159] == 255:
+            point(name='human')
 
     if draw_contour(img,rover,  (0, 255, 255), name='rover') :
-            set_effect(r=255, g=255, b=0)
-            rospy.sleep(0.1)
-            if stone[119][159] == 255:
-                point(name='rover')
+        if stone[119][159] == 255:
+            point(name='rover')
 
     
     
@@ -163,13 +178,25 @@ navigate_wait(frame_id='aruco_3', x=0, y=0, z=1.5)
 rospy.sleep(2)
 
 
-navigate_wait(x=2, y=0, z=1.5, frame_id='aruco_map')
-navigate_wait(x=2, y=5, z=1, frame_id='aruco_map')
-navigate_wait(x=4, y=5, z=1, frame_id='aruco_map')
-navigate_wait(x=4 , y=0, z=1, frame_id='aruco_map')
-navigate_wait(x=6, y=0, z=1, frame_id='aruco_map')
-navigate_wait(x=6 , y=5, z=1, frame_id='aruco_map')
+navigate_wait(x=1, y=0, z=1, frame_id='aruco_map')
+rospy.sleep(3)
+navigate_wait(x=1, y=2.5, z=1, frame_id='aruco_map')
+rospy.sleep(3)
+navigate_wait(x=1, y=5, z=1, frame_id='aruco_map')
+rospy.sleep(3)
+navigate_wait(x=3, y=5, z=1, frame_id='aruco_map')
+rospy.sleep(3)
+navigate_wait(x=3, y=3, z=1, frame_id='aruco_map')
+rospy.sleep(3)
 navigate_wait(x=3 , y=0, z=1, frame_id='aruco_map')
+rospy.sleep(2)
+navigate_wait(x=5, y=0, z=1, frame_id='aruco_map')
+rospy.sleep(2)
+navigate_wait(x=5 , y=5, z=1, frame_id='aruco_map')
+rospy.sleep(3)
+navigate_wait(x=2 , y=0, z=1, frame_id='aruco_map')
+rospy.sleep(2) 
+
 
 navigate_wait(frame_id='aruco_3', x=0, y=0, z=1.8)
 rospy.sleep(2)
@@ -179,12 +206,12 @@ land()
 
 
 
-f = open('detect.txt', 'w')
-f.write('stone '+str(x1)+' '+str(y1)+' '+str(color.get('stone'))+'\n')
-f.write('tree 1 '+str(x2)+' '+str(y2)+' '+str(color.get('tree 1'))+'\n')
-f.write('tree 2 '+str(x3)+' '+str(y3)+' '+str(color.get('tree 2'))+'\n')
-f.write('human '+str(x4)+' '+str(y4)+' '+str(color.get('human'))+'\n')
-f.write('rover '+str(x5)+' '+str(y5)+' '+str(color.get('rover'))+'\n')
+f = open('d.txt', 'w')
+f.write('stone '+str(x1)+' '+str(y1)+' '+str(color_detect.get('stone'))+'\n')
+f.write('tree 1 '+str(x2)+' '+str(y2)+' '+str(color_detect.get('tree 1'))+'\n')
+f.write('tree 2 '+str(x3)+' '+str(y3)+' '+str(color_detect.get('tree 2'))+'\n')
+f.write('human '+str(x4)+' '+str(y4)+' '+str(color_detect.get('human'))+'\n')
+f.write('rover '+str(x5)+' '+str(y5)+' '+str(color_detect.get('rover'))+'\n')
 f.close()
 
 rospy.spin()
