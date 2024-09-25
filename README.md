@@ -25,7 +25,8 @@
 ## Порядок выполнения проверки
     
 **https://1drv.ms/x/c/8e997581c10a3126/ETir6DfYjeVNn_z09sgygx0BI8vJJylXbXAf2D9sMxTCXQ?e=QzCvJ1**
-    
+## Отчет о выполнении проверок
+**https://1drv.ms/w/c/8e997581c10a3126/EY7g0MCekoZJtL6cUr-C9bMBN1yOBsuLruaSWFRJyRH0dw?e=wnBB3V**
 ## План работ
 * Продумать алгоритм работы ​
 * Создать нейронную сеть​
