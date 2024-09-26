@@ -161,5 +161,5 @@ We want to present a solution to the task in the competence of **`"Artificial in
 * **`test result:`** [neurons]()
 * **`victim recognition`** [program](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/programm_Copter.py )
 * **`transportation of survival kit and first aid kit`** [program] ()
-* **`Explanatory `** [note](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/Explanatory %20 note.docx)
+* **`Documentation `** [note](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/Documentation %20 note.docx)
 * **`the result of the work done`** [video] ()
