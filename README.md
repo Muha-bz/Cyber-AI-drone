@@ -13,7 +13,7 @@
 
 Использование технологий искусственного интеллекта позволяет не только улучшить точность идентификации объектов, но и способствует адаптации к изменениям окружающей среды и постоянному самосовершенствованию системы за счет обучения на собранных данных.
 ### Purpose and relevance of the work
-Organization of a rescue operation (mission) with the creation of a flight task in rough terrain using a KBS (Integrated unmanned system) using a neural network: detection, cargo delivery (without dumping), transmission of coordinates. The task is designed for independent cargo collection. We were inspired to this project by the volunteer search team "LizaAlert", which aims to provide rapid response for civilian assistance in the search for the missing
+Organization of a rescue operation (mission) with the creation of a flight task in rough terrain using a integrated drone system using a neural network: detection, cargo delivery (without dumping), transmission of coordinates. The task is designed for independent cargo collection. We were inspired to this project by the volunteer search team "LizaAlert", which aims to provide rapid response for civilian assistance in the search for the missing
 
 The use of artificial intelligence technologies allows not only to improve the accuracy of object identification, but also contributes to adaptation to environmental changes and continuous self-improvement of the system through training on the collected data.
 
@@ -79,6 +79,8 @@ You can read more about the plan in [**приложении**](https://1drv.ms/x
 ## Neural network
 It was created using **`yolov8`** and **`roboflow`**. Using **`roboflow`**, we created a dataset and uploaded it to **`ultralytics hub'**.
 
+![Описание изображения](images/4.jpg)
+
 ## Выполнение миссии
 Для выполнения миссии нам понадобилась библиотека **`opencv`**. Мы использовали различные маски для детекции объектов для последующего использования, чтобы найти объекты. Был создан алгоритм для проследующего движения ровера к месту обнаружения пострадавшего.
 
@@ -98,10 +100,6 @@ To complete the mission, we needed the **`opencv`** library. We used various mas
 **`Мухина Кира`**:  программа для детекции объектов
 
 **`Зуева Алина `**:  Team-lider
-
-![Описание изображения](images/1.jpg)
-
-![Описание изображения](images/2.jpg)
 
 **`Роли и обязоности приведены ниже `**
 
@@ -129,10 +127,6 @@ There are 5 people in our team:
 
 **`Zueva Alina '**: Team-lider
 
-![Image Description](images/1.jpg )
-
-![Image Description](images/2.jpg )
-
 **`The roles and responsibilities are listed below `**
 
 | Participant's full name | Role | Responsibilities |
@@ -142,6 +136,10 @@ There are 5 people in our team:
 | Bulat Irshatovich Hammatov | Tester | Testing and debugging of equipment |
 |Tolkunov Ivan Sergeevich | Programmer rover| The rover's motion algorithm |
 |Zueva Alina Nikolaevna | Team-leader | Project coordination, time management |
+
+![Описание изображения](images/1.jpg)
+
+![Описание изображения](images/2.jpg)
 
 
 We want to present a solution to the task in the competence of **`"Artificial intelligence in complex unmanned systems"`**.
