@@ -1,4 +1,3 @@
-
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&pause=1000&color=1C617FDB&multiline=true&width=450&height=100&lines=%D0%9C%D1%8B+%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0+Cyber+AI+drone+%D0%B8+%D0%BC%D1%8B+%D1%85%D0%BE%D1%82%D0%B8%D0%BC;%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82+%22%D0%9C%D1%8B+%D0%BD%D0%B0%D0%B9%D0%B4%D1%91%D0%BC+%D1%82%D0%B5%D0%B1%D1%8F%22)](https://git.io/typing-svg)
 ## О проекте "Мы найдем тебя"
 ## About project "We will find You!"
@@ -144,7 +143,7 @@ There are 5 people in our team:
 ![Описание изображения](images/1.jpg)
 
 ![Описание изображения](images/2.jpg)
-
+## [**результат проделанной работы**](https://disk.yandex.ru/i/mKpjEilXAF9ebw)
 
 We want to present a solution to the task in the competence of **`"Artificial intelligence in complex unmanned systems"`**.
 
@@ -155,13 +154,13 @@ We want to present a solution to the task in the competence of **`"Artificial in
 * **`распознование пострадавшего`** [программа](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/programm_Copter.py)
 * **`транспортировка набора выживания и аптечки`** [программа] ()
 * **`Пояснительная `** [записка](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/Пояснительная%20записка.docx)
-* **`результат проделанной работы`** [видео] ()
+* **`результат проделанной работы`** [видео](https://disk.yandex.ru/i/mKpjEilXAF9ebw)
 
 ## 📖 Content
 * **`learning`** [neural network](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/Сyber-AI-drone.pt )
 
 * **`test result:`** [neurons]()
 * **`victim recognition`** [program](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/programm_Copter.py )
-* **`transportation of survival kit and first aid kit`** [program] ()
+* **`transportation of survival kit and first aid kit`** [program]()
 * **`Documentation `** [note](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/Documentation %20 note.docx)
 * **`the result of the work done`** [video] ()
