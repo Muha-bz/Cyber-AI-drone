@@ -13,7 +13,7 @@
 
 Использование технологий искусственного интеллекта позволяет не только улучшить точность идентификации объектов, но и способствует адаптации к изменениям окружающей среды и постоянному самосовершенствованию системы за счет обучения на собранных данных.
 ### Purpose and relevance of the work
-Organization of a rescue operation (mission) with the formation of a flight task in rough terrain using a KBS (Integrated unmanned system) using a neural network: detection, cargo delivery (without dumping), transmission of coordinates. The task is designed for independent cargo collection. We were inspired to this project by the volunteer search team "LizaAlert", which aims to provide rapid response and civilian assistance in the search for the missing
+Organization of a rescue operation (mission) with the creation of a flight task in rough terrain using a KBS (Integrated unmanned system) using a neural network: detection, cargo delivery (without dumping), transmission of coordinates. The task is designed for independent cargo collection. We were inspired to this project by the volunteer search team "LizaAlert", which aims to provide rapid response for civilian assistance in the search for the missing
 
 The use of artificial intelligence technologies allows not only to improve the accuracy of object identification, but also contributes to adaptation to environmental changes and continuous self-improvement of the system through training on the collected data.
 
@@ -111,7 +111,7 @@ To complete the mission, we needed the **`opencv`** library. We used various mas
 | Мухина Кира Сергеевна     | Программист дрон |   Программа для детекции объектов     |
 | Хамматов Булат  Иршатович | Тестировщик      | Тестировка и отладка оборудования     |
 |Толкунов Иван Сергеевич    | Программист ровер| Алгоритм движения ровера              |
-|Зуева Алина Николаевна     | Team-lider       | Координация проекта, тайм-мэнеджмент  |
+|Зуева Алина Николаевна     | Team-leader       | Координация проекта, тайм-мэнеджмент  |
 
 
 Хотим представить решение поставленной задачи в компетенции **`"Искусвенный интелект в комплексных беспилотных системах"`**.
@@ -141,7 +141,7 @@ There are 5 people in our team:
 | Mukhina Kira Sergeevna | Drone Programmer | Object detection software |
 | Bulat Irshatovich Hammatov | Tester | Testing and debugging of equipment |
 |Tolkunov Ivan Sergeevich | Programmer rover| The rover's motion algorithm |
-|Zueva Alina Nikolaevna | Team-lider | Project coordination, time management |
+|Zueva Alina Nikolaevna | Team-leader | Project coordination, time management |
 
 
 We want to present a solution to the task in the competence of **`"Artificial intelligence in complex unmanned systems"`**.
@@ -159,7 +159,7 @@ We want to present a solution to the task in the competence of **`"Artificial in
 * **`learning`** [neural network](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/Сyber-AI-drone.pt )
 
 * **`test result:`** [neurons]()
-* **`victim recognition'** [program](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/programm_Copter.py )
+* **`victim recognition`** [program](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/programm_Copter.py )
 * **`transportation of survival kit and first aid kit`** [program] ()
 * **`Explanatory `** [note](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/Explanatory %20 note.docx)
 * **`the result of the work done`** [video] ()
