@@ -80,6 +80,6 @@
 * **`результат тестирования:`** [нейронки]()
 * **`распознование пострадавшего`** [программа](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/programm_Copter.py)
 * **`транспортировка набора выживания и аптечки`** [программа] ()
-  * **`Пояснительная `** [записка](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/Пояснительная%20записка.docx)
+* **`Пояснительная `** [записка](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/Пояснительная%20записка.docx)
 * **`результат проделанной работы`** [видео] ()
  
