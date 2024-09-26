@@ -27,18 +27,17 @@
 * Найти объект. Моргнуть трижды фарами. Передать груз
 * Вернуться в зону парковки. Выкл. фары
 
-## Порядок выполнения проверки
-    
-**https://1drv.ms/x/c/8e997581c10a3126/ETir6DfYjeVNn_z09sgygx0BI8vJJylXbXAf2D9sMxTCXQ?e=QzCvJ1**
-## Отчет о выполнении проверок
-**https://1drv.ms/w/c/8e997581c10a3126/EY7g0MCekoZJtL6cUr-C9bMBN1yOBsuLruaSWFRJyRH0dw?e=wnBB3V**
+[**Порядок выполнения проверки**](https://1drv.ms/x/c/8e997581c10a3126/ETir6DfYjeVNn_z09sgygx0BI8vJJylXbXAf2D9sMxTCXQ?e=QzCvJ1)
+
+[**Отчет о выполнении проверок**](https://1drv.ms/w/c/8e997581c10a3126/EY7g0MCekoZJtL6cUr-C9bMBN1yOBsuLruaSWFRJyRH0dw?e=wnBB3V)
+
 ## План работ
 * Продумать алгоритм работы ​
 * Создать нейронную сеть​
 * Написать код распознавания объектов​
 * Написать алгоритм движения ровера по данным полученным из неиросети
 
-Подробнее вы можете ознакомиться с планом в приложении **https://1drv.ms/x/c/8e997581c10a3126/EZwav9RLN3lFmgS0CpPVzr8BZBBNfjNsvDEk8561q5dxOw?e=LDzxkx**
+Подробнее вы можете ознакомиться с планом в [**приложении**](https://1drv.ms/x/c/8e997581c10a3126/EZwav9RLN3lFmgS0CpPVzr8BZBBNfjNsvDEk8561q5dxOw?e=LDzxkx)
 ## Нейронная сеть
 Она была создана при помощи **`yolov8`** и **`roboflow`**. При помощи **`roboflow`** мы создали dataset и загрузили его в **`ultralytics hub`**.
 
