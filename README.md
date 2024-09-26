@@ -79,7 +79,11 @@ You can read more about the plan in [**приложении**](https://1drv.ms/x
 ## Neural network
 It was created using **`yolov8`** and **`roboflow`**. Using **`roboflow`**, we created a dataset and uploaded it to **`ultralytics hub'**.
 
-![Описание изображения](images/4.jpg)
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="images/4.png">
+ <source media="(prefers-color-scheme: light)" srcset="images/4.png">
+ <img alt="images/4.png" src="images/4.jpg">
+</picture
 
 ## Выполнение миссии
 Для выполнения миссии нам понадобилась библиотека **`opencv`**. Мы использовали различные маски для детекции объектов для последующего использования, чтобы найти объекты. Был создан алгоритм для проследующего движения ровера к месту обнаружения пострадавшего.
