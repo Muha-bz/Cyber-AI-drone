@@ -150,17 +150,17 @@ We want to present a solution to the task in the competence of **`"Artificial in
 ## 📖 содержание
 * **`обучение`** [нейронной сети](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/Сyber-AI-drone.pt)
   
-* **`результат тестирования:`** [нейронки]()
+* **`результат тестирования:`** [нейронки](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/images/4.png)
 * **`распознование пострадавшего`** [программа](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/programm_Copter.py)
-* **`транспортировка набора выживания и аптечки`** [программа] ()
+* **`транспортировка набора выживания и аптечки`** [программа](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/programm_Rover.py)
 * **`Пояснительная `** [записка](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/Пояснительная%20записка.docx)
 * **`результат проделанной работы`** [видео](https://disk.yandex.ru/i/mKpjEilXAF9ebw)
 
 ## 📖 Content
 * **`learning`** [neural network](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/Сyber-AI-drone.pt )
 
-* **`test result:`** [neurons]()
+* **`test result:`** [neurons](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/images/4.png)
 * **`victim recognition`** [program](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/programm_Copter.py )
-* **`transportation of survival kit and first aid kit`** [program]()
-* **`Documentation `** [note](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/Documentation %20 note.docx)
-* **`the result of the work done`** [video] ()
+* **`transportation of survival kit and first aid kit`** [program](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/programm_Rover.py)
+* **`Documentation `** [note](https://github.com/Muha-bz/Cyber-AI-drone/blob/main/Cyber_AI/Documentation.docx))
+* **`the result of the work done`** [video](https://disk.yandex.ru/i/mKpjEilXAF9ebw)
